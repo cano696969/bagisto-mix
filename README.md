@@ -15,21 +15,7 @@ Para instalar Bagisto usando nuestro instalador GUI, siga estos pasos:
 
 composer install
 
-If you have downloaded the zip file, you will get the .env.example file. Just make a copy of that file as .env
 
-cp .env.example .env
-
-
-
-and also set all the .env variable as mentioned above. Once the variables have been set, generate the application key
-
-php artisan key:generate
-In
-
-
-
-Setting .env Variables
-Once the process has been executed, open the .env file using editors and set your .env variable, especially the ones below:
 
 APP_URL
 DB_CONNECTION
@@ -38,6 +24,21 @@ DB_PORT
 DB_DATABASE
 DB_USERNAME
 DB_PASSWORD
+
+
+If you have downloaded the zip file, you will get the .env.example file. Just make a copy of that file as .env
+
+cp .env.example .env
+
+and also set all the .env variable as mentioned above. Once the variables have been set, generate the application key
+
+php artisan key:generate
+
+
+
+
+
+
 
 
 
