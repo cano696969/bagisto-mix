@@ -8,12 +8,66 @@ Para instalar Bagisto usando nuestro instalador GUI, siga estos pasos:
 
 1.  [Descargar Bagisto (abre una nueva ventana)](https://bagisto.com/en/download/)desde nuestro sitio web.
     
-2.  Extraiga el contenido del archivo zip descargado.
-    
-3.  Navegue hasta el directorio raíz del proyecto.
+2.  Extraiga el contenido del archivo zip descargado Navegue hasta el directorio raíz del proyecto.
     
 4.  Ejecute el siguiente comando:
 
+
+composer install
+
+If you have downloaded the zip file, you will get the .env.example file. Just make a copy of that file as .env
+
+cp .env.example .env
+
+
+
+and also set all the .env variable as mentioned above. Once the variables have been set, generate the application key
+
+php artisan key:generate
+In
+
+
+
+Setting .env Variables
+Once the process has been executed, open the .env file using editors and set your .env variable, especially the ones below:
+
+APP_URL
+DB_CONNECTION
+DB_HOST
+DB_PORT
+DB_DATABASE
+DB_USERNAME
+DB_PASSWORD
+
+
+
+
+Instalación​
+Ejecute los siguientes comandos para continuar con el proceso de instalación.
+
+Ejecute el siguiente comando para crear una tabla de migración en la base de datos como se define en su archivo .env
+
+
+
+php artisan migrate
+
+Ahora la base de datos se inicializará con datos predeterminados utilizando clases de inicialización.
+
+php artisan db:seed
+
+
+php artisan vendor:publish
+-> Press 0 and then press enter to publish all assets and configurations.
+
+
+php artisan storage:link
+
+This is the end of the installation process
+
+
+
+
+admin@example.com
 
 
 ##### b. Extract the contents of zip and execute the project in your browser:
