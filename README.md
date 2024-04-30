@@ -1,1 +1,2 @@
-# bagisto-mix
+# mix-laravel
+ 
